@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    font-weight: normal;
+    color: rgba(53, 53, 53, 0.774);
+    font-size: 15px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #ffabde, 	#afd0ff);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5%;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5,80px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color:rgba(219,175,255,.75);
+}
+
+.calculator-grid > button:hover {
+    background-color:rgba(255, 255, 255, 0.829);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: #ffabddc0;
+    border: 1px solid blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1em;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.previous-operand {
+    font-size: 1.5em;
+
+}
+
+.current-operand {
+    font-size: 3em;
+}
+
+footer, a {
+    text-align: right;
+    margin-top: 2%;
+    margin-right: 2%;
+    font-size: 12px;
+}
